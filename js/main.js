@@ -1,21 +1,13 @@
-/* ==========================================================================
-   Sèmuse Mosaic — landing page scripts
-   1. Countdown to the next workshop
-   2. Sign-up form → Web3Forms API → delivered to the owner's email
-   ========================================================================== */
 
-/* ---------- Configuration (edit these) ---------- */
 const CONFIG = {
-  // Next workshop start (ISO 8601 with timezone offset)
+
   nextWorkshop: "2026-12-05T14:00:00-05:00",
 
-  // Free access key from https://web3forms.com (enter your email there; the
-  // key is safe to expose in front-end code — it can only send to that email).
   web3formsKey: "YOUR_ACCESS_KEY_HERE",
   apiUrl: "https://api.web3forms.com/submit",
 };
 
-/* ---------- 1. Countdown ---------- */
+/* 1. Countdown */
 (function initCountdown() {
   const els = {
     d: document.getElementById("d"),
@@ -46,7 +38,7 @@ const CONFIG = {
   setInterval(tick, 1000);
 })();
 
-/* ---------- 2. Sign-up form ---------- */
+/* 2. Sign-up form */
 (function initSignupForm() {
   const form = document.getElementById("signupForm");
   if (!form) return;
